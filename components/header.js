@@ -12,6 +12,7 @@ export default function Header({ siteTitle, siteDescription, menuItems }) {
         </Link>
 
         <nav className={style.nav}>
+          <p>yo yo yo</p>
           <ul>
             {menuItems.map((item) => (
               <li key={item.id}>
