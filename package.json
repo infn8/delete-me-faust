@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "faust dev",
+    "secure-dev": "concurrently \"faust dev\" \"local-ssl-proxy --key localhost-key.pem --cert localhost.pem --source 3001 --target 3000\"",
     "build": "faust build",
     "generate": "faust generatePossibleTypes",
     "start": "faust start"
@@ -15,5 +16,9 @@
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "local-ssl-proxy": "^2.0.5"
   }
 }
